@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Local data and model artifacts
+data/
+*.joblib
+*.pkl
+
+# OS/editor
+.DS_Store
+.vscode/
