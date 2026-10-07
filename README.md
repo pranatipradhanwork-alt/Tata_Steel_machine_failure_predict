@@ -4,6 +4,10 @@ A predictive maintenance classification project that estimates whether a machine
 
 > **Learning prototype:** The supplied dataset is synthetic. The model is not validated for real equipment and must not be used for safety-critical or autonomous maintenance decisions.
 
+## Live demo
+
+Try the deployed [Machine Failure Risk Demo](https://tatasteelmachinefailurepredict-o8f9yqmkitkqo8f8rqqnec.streamlit.app/). Upload the labeled `train.csv` file in the sidebar to fit the model and activate the prediction form.
+
 ## Project results
 
 - The training data contains 136,429 machine records; 2,148 (1.57%) are labeled as failures.
