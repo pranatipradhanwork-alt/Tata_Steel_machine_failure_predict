@@ -9,6 +9,7 @@ venv/
 # Local data and model artifacts
 data/
 *.joblib
+!models/machine_failure_rf.joblib
 *.pkl
 
 # OS/editor

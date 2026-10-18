@@ -6,7 +6,7 @@ A predictive maintenance classification project that estimates whether a machine
 
 ## Live demo
 
-Try the deployed [Machine Failure Risk Demo](https://tatasteelmachinefailurepredict-o8f9yqmkitkqo8f8rqqnec.streamlit.app/). Upload the labeled `train.csv` file in the sidebar to fit the model and activate the prediction form.
+Try the deployed [Machine Failure Risk Demo](https://tatasteelmachinefailurepredict-o8f9yqmkitkqo8f8rqqnec.streamlit.app/). A pre-trained model is included, so you can enter machine readings and get a risk score straight away. Uploading a labeled `train.csv` in the sidebar is optional and retrains the model.
 
 ## Project results
 
@@ -26,7 +26,8 @@ Try the deployed [Machine Failure Risk Demo](https://tatasteelmachinefailurepred
 ## Repository contents
 
 - [Colab notebook](notebooks/tata_steel_machine_failure_prediction.ipynb): EDA, preparation, model comparison, evaluation, and feature importance.
-- [Streamlit application](app.py): fits the model from an uploaded labeled training CSV and estimates risk for entered readings.
+- [Streamlit application](app.py): loads the pre-trained model and estimates risk for entered readings; can optionally retrain from an uploaded labeled CSV.
+- [Training script](train_model.py): trains the Random Forest with the notebook's settings and saves it to `models/machine_failure_rf.joblib`.
 - [Deployment instructions](DEPLOYMENT.md): local run and Streamlit Community Cloud setup.
 
 ## Run locally
@@ -38,7 +39,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-In the app, upload the project labeled `train.csv` file. The file is intentionally not stored in this public repository. The unlabeled `test.csv` cannot be used to train the demo.
+The app loads the pre-trained model from `models/`. The training data is intentionally not stored in this public repository. To rebuild the model, run `python train_model.py path/to/train.csv`. The unlabeled `test.csv` cannot be used to train the demo.
 
 ## Tech stack
 
